@@ -1,6 +1,6 @@
 import { ExternalLink } from '@/ui/external-link';
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className="prose prose-sm prose-invert max-w-none">
       <h1 className="text-xl font-bold">Streaming with Suspense</h1>

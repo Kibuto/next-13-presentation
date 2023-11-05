@@ -1,14 +1,7 @@
-import { Suspense } from 'react';
-
 import { Ping } from '@/ui/ping';
-import { Reviews, ReviewsSkeleton } from '@/app/components/reviews';
-import {
-  RecommendedProducts,
-  RecommendedProductsSkeleton,
-} from '@/app/components/recommended-products';
+import { Reviews } from '@/app/components/reviews';
+import { RecommendedProducts } from '@/app/components/recommended-products';
 import { SingleProduct } from '@/app/components/single-product';
-
-export const runtime = 'experimental-edge';
 
 export default async function Page({ params }: { params: { id: string } }) {
   return (
@@ -32,38 +25,26 @@ export default async function Page({ params }: { params: { id: string } }) {
         </div>
       </div>
 
-      {/* <Suspense fallback={<RecommendedProductsSkeleton />}> */}
       {/* @ts-ignore */}
       <RecommendedProducts
         path="/ssr"
         data={fetch(
-          // We intentionally delay the reponse to simulate a slow data
-          // request that would benefit from streaming
           `https://app-router-api.vercel.app/api/products?delay=5000&filter=${params.id}`,
           {
-            // We intentionally disable Next.js Cache to better demo
-            // streaming
             cache: 'no-store',
           }
         )}
       />
-      {/* </Suspense> */}
 
-      {/* <Suspense fallback={<ReviewsSkeleton />}> */}
       {/* @ts-ignore */}
       <Reviews
         data={fetch(
-          // We intentionally delay the reponse to simulate a slow data
-          // request that would benefit from streaming
           `https://app-router-api.vercel.app/api/reviews?delay=10000`,
           {
-            // We intentionally disable Next.js Cache to better demo
-            // streaming
             cache: 'no-store',
           }
         )}
       />
-      {/* </Suspense> */}
     </div>
   );
 }
