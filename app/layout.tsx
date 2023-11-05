@@ -4,6 +4,7 @@ import { AddressBar } from '@/ui/address-bar';
 import { GlobalNav } from '@/ui/global-nav';
 import Byline from '@/ui/byline';
 import './globals.css';
+import BuggyButton from '@/ui/buggy-button';
 
 export const metadata: Metadata = {
   title: {
@@ -29,6 +30,7 @@ export default function RootLayout({
                 <AddressBar />
               </div>
             </div>
+            <BuggyButton />
 
             <div className="bg-vc-border-gradient rounded-lg p-px shadow-lg shadow-black/20">
               <div className="rounded-lg bg-black p-3.5 lg:p-6">{children}</div>

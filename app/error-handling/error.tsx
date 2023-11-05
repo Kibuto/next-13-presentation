@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
-
-import Button from '@/ui/button';
 import { Boundary } from '@/ui/boundary';
+import Button from '@/ui/button';
+import React from 'react';
 
 export default function Error({ error, reset }: any) {
   React.useEffect(() => {
@@ -11,7 +10,7 @@ export default function Error({ error, reset }: any) {
   }, [error]);
 
   return (
-    <Boundary labels={['./@views/error.tsx']} color="pink">
+    <Boundary labels={['./error-handling/error.tsx']} color="pink">
       <div className="space-y-4">
         <h2 className="text-lg font-bold">Error</h2>
         <p className="text-sm">{error?.message}</p>
