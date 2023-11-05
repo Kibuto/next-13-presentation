@@ -29,7 +29,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       <RecommendedProducts
         path="/ssr"
         data={fetch(
-          `https://app-router-api.vercel.app/api/products?delay=5000&filter=${params.id}`,
+          `https://app-router-api.vercel.app/api/products?delay=4000&filter=${params.id}`,
           {
             cache: 'no-store',
           }
@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { id: string } }) {
       {/* @ts-ignore */}
       <Reviews
         data={fetch(
-          `https://app-router-api.vercel.app/api/reviews?delay=10000`,
+          `https://app-router-api.vercel.app/api/reviews?delay=7000`,
           {
             cache: 'no-store',
           }

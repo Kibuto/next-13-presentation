@@ -41,7 +41,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           data={fetch(
             // We intentionally delay the reponse to simulate a slow data
             // request that would benefit from streaming
-            `https://app-router-api.vercel.app/api/products?delay=5000&filter=${params.id}`,
+            `https://app-router-api.vercel.app/api/products?delay=4000&filter=${params.id}`,
             {
               // We intentionally disable Next.js Cache to better demo
               // streaming
@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           data={fetch(
             // We intentionally delay the reponse to simulate a slow data
             // request that would benefit from streaming
-            `https://app-router-api.vercel.app/api/reviews?delay=10000`,
+            `https://app-router-api.vercel.app/api/reviews?delay=7000`,
             {
               // We intentionally disable Next.js Cache to better demo
               // streaming
