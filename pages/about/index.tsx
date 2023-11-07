@@ -15,6 +15,11 @@ function About() {
           </Link>
         </li>
         <li>
+          <Link href="/about/about-ssr" prefetch>
+            About SSR
+          </Link>
+        </li>
+        <li>
           <Link href="/contact-us" prefetch>
             Contact Us
           </Link>
