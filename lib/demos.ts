@@ -9,6 +9,11 @@ export const demos: { name: string; items: Item[] }[] = [
     name: 'Layouts',
     items: [
       {
+        name: 'Nested Layouts',
+        slug: 'layouts',
+        description: 'Create UI that is shared across routes',
+      },
+      {
         name: 'Parallel Routes',
         slug: 'parallel-routes',
         description: 'Render multiple pages in the same layout',
