@@ -1,5 +1,5 @@
 import Card from '@/components/card';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export async function getServerSideProps() {
   // Fetch data from an API
@@ -16,6 +16,7 @@ export async function getServerSideProps() {
 
 const Home = (props: any) => {
   const { data } = props;
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const btn = document.getElementById('button');
@@ -29,6 +30,8 @@ const Home = (props: any) => {
       <h1>Server Side Rendering Example</h1>
       <Card data={data} />
       <button id="button">Click here</button>
+      <span>{count}</span>
+      <button onClick={() => setCount((c) => c + 1)}>Count</button>
     </div>
   );
 };

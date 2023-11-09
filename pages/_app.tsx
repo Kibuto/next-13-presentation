@@ -16,8 +16,10 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     ((page) => {
       return (
         <>
-          <div>Layout default</div>
-          <input />
+          <section className="flex items-center justify-between">
+            <p>Layout default</p>
+          </section>
+
           {page}
         </>
       );

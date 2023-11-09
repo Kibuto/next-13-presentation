@@ -1,3 +1,4 @@
+import { ClickCounter } from '@/ui/click-counter';
 import { TabGroup } from '@/ui/tab-group';
 
 const title = 'Streaming';
@@ -27,6 +28,7 @@ export default async function Layout({
             },
           ]}
         />
+        <ClickCounter />
       </div>
 
       <div className="space-y-10">{children}</div>
